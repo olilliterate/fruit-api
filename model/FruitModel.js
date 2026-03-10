@@ -46,7 +46,6 @@ class FruitsModel {
 
     delete() {
         const deletedFruitIndex = fruitsArray.findIndex(f => f.name.toLowerCase() === this.name.toLowerCase());
-        console.log(deletedFruitIndex)
         if(deletedFruitIndex != -1) {
             fruitsArray.splice(deletedFruitIndex, 1);
             return fruitsArray;
