@@ -1,3 +1,7 @@
+// The model is responsible for building the http response.
+// The response include the status code, HTTP protocol version, headers and main
+
+
 const FruitsModel = require("../model/FruitModel.js");
 
 const showAllFruits = async (req, res) => {

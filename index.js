@@ -1,3 +1,5 @@
+//this is the entry point to our application
+
 const app = require('./app');
 const port = 3000;
 
