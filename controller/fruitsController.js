@@ -8,9 +8,19 @@ const showAllFruits = async (req, res) => {
     try{
         const fruits = await FruitsModel.showAllFruits();
         res.status(200).send(fruits);
-    } catch(e) {
-        res.status(500).send({error: e});
+    } catch(err) {
+        res.status(500).send({error: err});
     }
 }
 
-module.exports = {showAllFruits};
+const showFruit = async (req, res) => {
+    const name = req.params.name.toLowerCase();
+    try{
+        const fruits = await FruitsModel.showFruit(name);
+        res.status(200).send(fruits);
+    } catch (err) {
+        res.status(404).send({error: err});
+    }
+}
+
+module.exports = {showAllFruits, showFruit};
